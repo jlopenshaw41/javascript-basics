@@ -1,63 +1,69 @@
-const negate = a => {
-  // your code here
-};
+const negate = a => !a;
 
-const both = (a, b) => {
-  // your code here
-};
+const both = (a, b) => a && b;
 
-const either = (a, b) => {
-  // your code here
-};
+const either = (a, b) => a || b;
 
-const none = (a, b) => {
-  // your code here
-};
+const none = (a, b) => !a && !b;
 
-const one = (a, b) => {
-  // your code here
-};
+const one = (a, b) => !a && b || a && !b;
 
 const truthiness = a => {
-  // your code here
+  if (a) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
-const isEqual = (a, b) => {
-  // your code here
-};
+const isEqual = (a, b) => a === b;
 
-const isGreaterThan = (a, b) => {
-  // your code here
-};
+const isGreaterThan = (a, b) => a > b;
 
-const isLessThanOrEqualTo = (a, b) => {
-  // your code here
-};
+const isLessThanOrEqualTo = (a, b) => a <= b;
 
 const isOdd = a => {
-  // your code here
+  if (a % 2 === 0) {
+    return false;
+  } else {
+    return true;
+  }
 };
 
 const isEven = a => {
-  // your code here
+  if (a % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
-const isSquare = a => {
-  // your code here
-};
+const isSquare = a => Math.sqrt(a) % 1 === 0;
 
 const startsWith = (char, string) => {
-  // your code here
+  if (string[0] === char) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 const containsVowels = string => {
-  // your code here
+  string = string.toLowerCase();
+  if ((string.includes("a")) || (string.includes("e")) || (string.includes("i")) || (string.includes("o")) || (string.includes("o"))) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 const isLowerCase = string => {
-  // your code here
+  if (string == string.toLowerCase()) {
+    return true;
+  } else {
+    return false;
 };
-
+}
 module.exports = {
   negate,
   both,
