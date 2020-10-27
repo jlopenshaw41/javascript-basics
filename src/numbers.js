@@ -1,6 +1,5 @@
 const add = (a, b) => a + b;
 
-
 const subtract = (a, b) => a - b;
 
 const multiply = (a, b) => a * b;
@@ -17,13 +16,7 @@ const roundDown = a => Math.floor(a);
 
 const absolute = a => Math.abs(a);
 
-const quotient = (a, b) => {
-
-  const remainder = a % b;
-  const newA = a - remainder;
-  return newA / b;
-
-};
+const quotient = (a, b) => Math.trunc(a / b);
 
 const remainder = (a, b) => a % b;
 
