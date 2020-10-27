@@ -5,13 +5,10 @@ const createPerson = (name, age) => {
   }
 };
 
-
 const getName = object => object.name;  
-
 
 const getProperty = (property, object) => object[property];
   
-
 const hasProperty = (property, object) => object.hasOwnProperty(property);
 
 const isOver65 = person => {
@@ -61,7 +58,13 @@ const averageAge = people => {
 };
 
 const createTalkingPerson = (name, age) => {
-    function Person
+    return {
+      name: name,
+      age: age,
+      introduce: function (greeter){
+        return `Hi ${greeter}, my name is ${this.name} and I am ${this.age}!`;
+      }
+    }
 };
 
 module.exports = {

@@ -1,61 +1,83 @@
 const getNthElement = (index, array) => {
-  // your code here
+  while (index >= array.length) {
+    return array[index - array.length];
+  } return array[index];
 };
 
-const arrayToCSVString = array => {
-  // your code here
-};
+const arrayToCSVString = array => array.join();
 
-const csvStringToArray = string => {
-  // your code here
-};
+const csvStringToArray = string => string.split(",");
 
 const addToArray = (element, array) => {
-  // your code here
+  array.push(element);
 };
 
-const addToArray2 = (element, array) => {
-  // your code here
-};
+const addToArray2 = (element, array) => array.concat(element);
 
-const removeNthElement = (index, array) => {
-  // your code here
-};
+const removeNthElement = (index, array) => array.splice(index, 1);
 
 const numbersToStrings = numbers => {
-  // your code here
+  return (numbers.toString()).split(",");
 };
 
 const uppercaseWordsInArray = strings => {
-  // your code here
+  return strings.map(element => {
+    return element.toUpperCase();
+  });
 };
 
 const reverseWordsInArray = strings => {
-  // your code here
+  return strings.map(string => {
+    return string.split("").reverse().join("");
+  });
 };
 
 const onlyEven = numbers => {
-  // your code here
+  return numbers.filter(currentValue => {
+    return currentValue % 2 === 0;
+  });
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
+  let beforeIndex = [];
+  let afterIndex = [];
+  
+  beforeIndex = array.slice(0, index);
+  afterIndex = array.slice(index + 1);
+
+  return beforeIndex.concat(afterIndex);
 };
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  return strings.filter(string => {
+    return string[0] === "a" || string[0] === "e" || string[0] === "i" || string[0] === "o" || string[0] === "u" || string[0] === "A" || string[0] === "E" || string[0] === "I" || string[0] === "O" || string[0] === "U";
+  }
+  );
 };
 
 const removeSpaces = string => {
-  // your code here
+  const newArray = string.split(" ");
+  const trimmedArray = newArray.map(element => {
+    return element.trim("");
+  });
+  return trimmedArray.join("");
 };
 
 const sumNumbers = numbers => {
-  // your code here
+  return numbers.reduce((accumulator, number) => {
+    return accumulator + number;
+  });
 };
 
 const sortByLastLetter = strings => {
-  // your code here
+  const reverse = strings.map(string => {
+    return string.split("").reverse().join("");
+  });
+  const reverseSorted = reverse.sort();
+  const finalArray = reverseSorted.map(string => {
+    return string.split("").reverse().join("");
+  });
+  return finalArray;
 };
 
 module.exports = {
