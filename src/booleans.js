@@ -6,7 +6,7 @@ const either = (a, b) => a || b;
 
 const none = (a, b) => !a && !b;
 
-const one = (a, b) => !a && b || a && !b;
+const one = (a, b) => (!a && b) || (a && !b);
 
 const truthiness = a => {
   if (a) {
@@ -50,7 +50,13 @@ const startsWith = (char, string) => {
 
 const containsVowels = string => {
   string = string.toLowerCase();
-  if ((string.includes("a")) || (string.includes("e")) || (string.includes("i")) || (string.includes("o")) || (string.includes("o"))) {
+  if (
+    string.includes("a") ||
+    string.includes("e") ||
+    string.includes("i") ||
+    string.includes("o") ||
+    string.includes("o")
+  ) {
     return true;
   } else {
     return false;
@@ -62,8 +68,8 @@ const isLowerCase = string => {
     return true;
   } else {
     return false;
+  }
 };
-}
 module.exports = {
   negate,
   both,
