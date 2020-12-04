@@ -11,9 +11,8 @@ const one = (a, b) => (!a && b) || (a && !b);
 const truthiness = a => {
   if (a) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 };
 
 const isEqual = (a, b) => a === b;
@@ -25,17 +24,15 @@ const isLessThanOrEqualTo = (a, b) => a <= b;
 const isOdd = a => {
   if (a % 2 === 0) {
     return false;
-  } else {
-    return true;
   }
+  return true;
 };
 
 const isEven = a => {
   if (a % 2 === 0) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 };
 
 const isSquare = a => Math.sqrt(a) % 1 === 0;
@@ -43,9 +40,8 @@ const isSquare = a => Math.sqrt(a) % 1 === 0;
 const startsWith = (char, string) => {
   if (string[0] === char) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 };
 
 const containsVowels = string => {
@@ -58,18 +54,17 @@ const containsVowels = string => {
     string.includes("o")
   ) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 };
 
 const isLowerCase = string => {
-  if (string == string.toLowerCase()) {
+  if (string === string.toLowerCase()) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 };
+
 module.exports = {
   negate,
   both,
